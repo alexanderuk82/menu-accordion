@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@0');
+
+@import url('https://use.typekit.net/eml6hah.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62, 5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', 'sans-serif';
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+}
+.container {
+  display: flex;
+  width: 100vw;
+}
+.panel {
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 0.3;
+  position: relative;
+  cursor: pointer;
+  &.active {
+    flex: 3;
+
+    h3 {
+      width: 100%;
+      text-align: center;
+      font-size: 10rem;
+      transform: translateY(20%) rotate(-90deg);
+
+      @media only screen and (min-width: 111em) {
+        transform: translateY(50%) rotate(-90deg);
+      }
+    }
+    p {
+      opacity: 1;
+      bottom: 20rem;
+      padding: 0 6rem;
+    }
+  }
+}
+h3 {
+  font-family: 'flood-std', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 7rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+  top: 16rem;
+  transition: font-size 0.6s ease-in;
+}
+p {
+  position: absolute;
+  font-size: 1.6rem;
+  bottom: 0;
+  text-align: center;
+  padding: 0 2rem;
+  line-height: 2rem;
+  transition: all 0.3s ease-in-out 0.1s;
+  opacity: 0;
+}
